@@ -1,0 +1,82 @@
+/*
+Theme Name: The Cover Guy Original
+GitHub Theme URI: https://github.com/jontroth/coverguy-original
+Author: Jon Troth
+Author URI: http://troth.co
+Description: Custom Original theme for The Cover Guy
+Template: twentytwelve
+Version: 1.0.2
+Tags: red, white, grey, fluid-layout, responsive-layout
+Text Domain: thecoverguy
+*/
+
+#main { 
+padding: 10px 10px 10px 25px;
+	background-color:#fff;
+	border-radius:10px;
+	
+}
+
+.site {
+    margin: 0 auto;
+    max-width: 807px;
+    overflow: hidden;
+    width: 807px !important;
+}
+
+.woocommerce-page .term-description {
+	padding:10px;
+	margin-bottom:20px;
+	background-color:#eee;
+	font-size:13px;
+	line-height:20px;
+}
+
+.archive-title, .page-title, .widget-title, .entry-content th, .comment-content th {
+    color: #3256a2;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2.18182;
+    text-transform: uppercase;
+}
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    background-color: #337903;
+    color: #fff;
+}
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+    background-color: #31680b;
+    color: #fff;
+}
+
+.wc_payment_method {
+	border-bottom:1px solid #ccc;
+	padding-bottom:15px;
+	padding-top:20px;
+}
+
+.wc_payment_method:last-child {
+	border-bottom-style:none;
+	padding-bottom:15px;
+	padding-top:20px;
+}
+
+
+.gfield_total {
+	display:none;
+}
+
+.gform_wrapper .gform_footer {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+ 
+
+.gform_wrapper .product_totals .top_label .gfield_label {
+    margin: 0;
+}
+body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
+    margin-top: 0;
+	margin-bottom:10px;
+}

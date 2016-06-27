@@ -1,0 +1,45 @@
+#mobile-navigation { display:none; }
+
+/* smaller than Desktop HD */
+@media (max-width: 1200px) {
+
+}
+
+/* smaller than desktop */
+@media (max-width: 1028px) {
+
+}
+		
+/* smaller than desktop */
+@media (max-width: 1000px) {
+
+}
+
+/* tablet */
+@media (max-width: 960px) {
+
+}
+
+/* smaller than tablet */
+@media (max-width: 768px) {
+	#click-menu img, #click-menu .threeLines { height: 21px !important; }
+	#click-menu-label { padding:10px; }
+	#click-menu { border-radius: 7px; }
+	#masthead, #loginlinks { display:none; }
+	#mobile-navigation { display:block; }
+}
+
+/* smaller than phablet */
+@media (max-width: 700px) {
+
+}
+
+/* smaller than phablet */
+@media (max-width: 550px) {
+
+}
+
+/* smaller than mobile */
+@media (max-width: 400px) {
+
+}
