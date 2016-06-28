@@ -176,6 +176,7 @@ get_header(); ?>
 }
 .cover-standard {
     background-image: url("<?php echo $theme; ?>/cover-standard.jpg");
+	background-position: center;
     width: 190px;
 }
 .cover-standard, .cover-deluxe, .cover-extreme {
@@ -188,6 +189,7 @@ get_header(); ?>
 }
 .cover-deluxe {
     background-image: url("<?php echo $theme; ?>/cover-deluxe.jpg");
+	background-position: center;
     width: 215px;
 }
 .cover-standard, .cover-deluxe, .cover-extreme {
@@ -200,6 +202,7 @@ get_header(); ?>
 }
 .cover-extreme {
     background-image: url("<?php echo $theme; ?>/cover-extreme.jpg");
+	background-position: center;
     width: 190px;
 }
 .cover-standard, .cover-deluxe, .cover-extreme {
@@ -291,7 +294,7 @@ get_header(); ?>
 			</div>
 			<div class="cover-subheader-yr2"><h2><?PHP echo $subheader; ?></h2></div>
 
-			<table border="0" cellspacing="0" cellpadding="0">
+			<?php /*<table id="table_hot_tub_cats" border="0" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>
 						<div class="floatcontainer">
@@ -352,7 +355,66 @@ get_header(); ?>
 						</div>
 					</td>
 				</tr>
-			</table>
+			</table>*/?>
+			
+			
+			<?php
+			if( CG_LANG == 'EN' ){
+				$standard_cover = site_url() . '/hot-tub-covers/standard-cover/shape/';
+				$standard_detail = site_url() . '/hot-tub-covers/standard-cover-details/';
+				$deluxe_cover = site_url() . '/hot-tub-covers/deluxe-cover/shape/';
+				$deluxe_detail = site_url() . '/hot-tub-covers/deluxe-cover-details/';
+				$extreme_cover = site_url() . '/hot-tub-covers/extreme-cover/shape/';
+				$extreme_detail = site_url() . '/hot-tub-covers/extreme-cover-details/';
+			}elseif( CG_LANG == 'FR' ){
+				$standard_cover = site_url() . '/fr/couvert-de-spa/regulier/forme/';
+				$standard_detail = site_url() . '/fr/couvert-de-spa/couvert-de-spa-standard-details/';
+				$deluxe_cover = site_url() . '/fr/couvert-de-spa/deluxe/forme/';
+				$deluxe_detail = site_url() . '/fr/couvert-de-spa/couvert-de-spa-de-luxe-details/';
+				$extreme_cover = site_url() . '/fr/couvert-de-spa/extreme/forme/';
+				$extreme_detail = site_url() . '/fr/couvert-de-spa/couvert-de-spa-extreme-details/';
+			} ?>
+			
+			<div id="hot_tub_cats">
+				<div class="floatcontainer cats_cover">
+					<div class="cover-standard" onclick="location.href='<?php echo $standard_cover; ?>'">
+						<div class="cover-name-b"><?PHP echo $standard; ?></div>
+						<div class="cover-taper-b"><?PHP echo $standard_taper; ?></div>
+						<div class="cover-price-b"><?PHP echo $standard_price; ?></div>
+						<div class="cover-details-b">
+							<a href="<?php echo $standard_cover; ?>" title="Hot Tub Spa Cover Standard Shapes"><img src="<?php echo $theme; ?>order-now-sml-b-<?PHP echo CG_LANG; ?>.gif" alt="Hot Tub Spa Cover Standard Shapes" border="0" ></a><br />
+							<a href="<?php echo $standard_detail; ?>" title="Hot Tub Spa Cover Standard Shapes"><?PHP echo $word['details']; ?> &raquo;</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="floatcontainer cats_cover">
+					<div class="cover-deluxe" onclick="location.href='<?php echo $deluxe_cover; ?>'">
+						<div class="cover-name"><?PHP echo $deluxe; ?></div>
+						<div class="cover-taper"><?PHP echo $deluxe_taper; ?></div>
+						<div class="cover-number-one"><?PHP if( CG_LANG == 'EN' ){ if( strtolower( $geo_state ) == 'ontario' ){ echo 'Our'; } ?> #1 Cover Sold<?PHP } ?></div>
+						<div class="cover-price"><?PHP echo $deluxe_price; ?></div>
+
+						<div class="cover-details">
+							<a href="<?php echo $deluxe_cover; ?>" title="Hot Tub Spa Cover Deluxe Shapes"><img src="<?php echo $theme; ?>order-now-b-<?PHP echo CG_LANG; ?>.gif" alt="Hot Tub Spa Cover Deluxe Shapes" border="0" ></a><br />
+							<a href="<?php echo $deluxe_detail; ?>" title="Hot Tub Spa Cover Deluxe Shapes"><?PHP echo $word['details']; ?> &raquo;</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="floatcontainer cats_cover">
+					<div class="cover-extreme" onclick="location.href='<?php echo $extreme_cover; ?>'">
+						<div class="cover-name-b"><?PHP echo $extreme; ?></div>
+						<div class="cover-taper-b"><?PHP echo $extreme_taper; ?></div>
+						<div class="cover-price-b"><?PHP echo $extreme_price; ?></div>
+						<div class="cover-details-b">
+							<a href="<?php echo $extreme_cover; ?>" title="Hot Tub Spa Cover Extreme Shapes"><img src="<?php echo $theme; ?>order-now-sml-b-<?PHP echo CG_LANG; ?>.gif" alt="Hot Tub Spa Cover Extreme Shapes" border="0" ></a><br />
+							<a href="<?php echo $extreme_detail; ?>" title="Hot Tub Spa Cover Extreme Shapes"><?PHP echo $word['details']; ?> &raquo;</a>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 			
 			
 			<?php while ( have_posts() ) : the_post(); ?>

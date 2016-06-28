@@ -80,3 +80,295 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
     margin-top: 0;
 	margin-bottom:10px;
 }
+
+
+/******************************* TROIS-SOIXANTE ADDONS  ******************************************/
+
+.indexImage {
+    margin: 0;
+    padding: 0;
+    height: 255px;
+    width: 800px;
+}
+.indexBlock {
+    font-family: "Carme",sans-serif;
+    line-height: 36px;
+    margin: 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+.floatcontainer::after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.floatcontainer {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+
+
+#testimonialdiv {
+    color: #ffffff;
+    height: 182px;
+    left: 0;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 10px;
+    overflow: auto;
+    padding-right: 10px;
+    position: static;
+    top: 0;
+    visibility: visible;
+    width: 270px;
+    z-index: auto;
+	font-weight:normal;
+	font-size:13px !important;
+	line-height:16px;
+}
+#testimonialdiv h2 { font-weight:bold; font-size:14px;  }
+	#testimonialdiv h3 { font-weight:normal; }
+
+
+
+.indexImage_container{
+	margin:0px auto;
+	max-width: 800px;
+}
+
+.indexImage{
+	background-size: cover;
+	width: 100% !important;
+}
+
+.mobile_store_links{
+	display: none;
+}
+
+.mobile_number_phone{
+	display: none;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 10px 20px 10px 20px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f1200+0,890e00+44,6f0a00+100 */
+	background: #9f1200; /* Old browsers */
+	background: -moz-linear-gradient(top,  #9f1200 0%, #890e00 44%, #6f0a00 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #9f1200 0%,#890e00 44%,#6f0a00 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #9f1200 0%,#890e00 44%,#6f0a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f1200', endColorstr='#6f0a00',GradientType=0 ); /* IE6-9 */
+}
+
+.content_testimonials{
+	width:312px;
+	height:191px;
+}
+
+.title_testimonials{
+	width:312px;
+}
+
+.left_testimonials{
+	float:left;
+	width:312px;
+}
+
+.hot_tub_container{
+	float:left;
+}
+
+
+.hot_tub_line{
+	width:312px;
+	height:9px;
+}
+
+.cats_cover{
+	float: left;
+}
+
+#hot_tub_cats{
+	width: 600px !important;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 959px) {
+	
+	.site {
+		margin: 0 auto;
+		max-width: 807px;
+		overflow: hidden;
+		width: 100% !important;
+	}
+	
+	#main{
+		padding: 0px 0px 0px 0px;
+	}
+	
+	#mobile-navigation{
+		padding: 10px 0 10px 0;
+	}
+	
+	#responsive-menu-title{
+		margin-top: 50px !important;
+	}
+	
+	#tcg_region_footer_wrapper{
+		padding-left: 24px;
+		padding-right: 24px;
+		text-align: center;
+		padding-top: 20px;
+	}
+	
+	.main_store_links{
+		display: none;
+	}
+	
+	.mobile_store_links{
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	
+	.mobile_number_phone{
+		display: inline-block;
+	}
+	
+	.left_testimonials{
+		float: none;
+		width: 100% !important;
+	}
+	
+	.content_testimonials{
+		width:100%;
+		height:191px;
+	}
+
+	.title_testimonials{
+		width:100%;
+		background: #899472;
+		height: 28px;
+		overflow: hidden;
+	}
+	
+	#testimonialdiv{
+		width: 100%;
+		margin-left: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	
+	.hot_tub_container{
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	.hot_tub_container img{
+		max-width: 100%;
+		height: auto;
+	}
+	
+	.hot_tub_line{
+		display: none;
+	}
+	
+	#click-menu-label{
+		display: none;
+	}
+	
+	#click-menu #RMX{
+		font-size: 40px !important;
+		line-height: 32px !important;
+		margin-top: 12px !important;
+	}
+	
+	.cats_cover{
+		/*float: none !important;*/
+		width: 33.3333%;
+	}
+	
+	.cover-standard {
+		width: 100% !important;
+		/*float: none !important;*/
+		background-position: center !important;
+	}
+	
+	.cover-deluxe{
+		width: 100% !important;
+		/*float: none !important;*/
+		background-position: center !important;
+	}
+	
+	.cover-extreme{
+		width: 100% !important;
+		/*float: none !important;*/
+		background-position: center !important;
+	}
+	
+	#table_hot_tub_cats{
+		width: 100%;
+	}
+	.site-content {
+		width: 100% !important;
+	}
+	
+	.widget-area{
+		width: 100%;
+	}
+	
+	#sidebar{
+		float: none !important;
+		margin: 0 auto;
+	}
+	
+	#hot_tub_cats{
+		width: 100% !important;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+
+	
+}
+
+@media screen and (max-width: 668px) {
+	
+	/*#testimonials_container{
+		display: none;
+	}*/
+	
+	.indexImage{
+		display: none;
+	}
+	
+	#tcg_region_footer_wrapper a{
+		display: block;
+	}
+	
+	.cats_cover{
+		float: none;
+		width: 100%;
+	}
+	
+
+}
+
+
+
+
+

@@ -20,7 +20,7 @@
 <!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -57,6 +57,12 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/../coverguy-original/js/bootstrap.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/../coverguy-original/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/../coverguy-original/css/bootstrap-theme.min.css">
+
 <?php wp_head(); ?>
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -85,8 +91,10 @@
 
 <div id="page" class="hfeed site">
 	
-	<div id="mobile-navigation" style="padding:10px;">
-		<img src="/wp-content/themes/coverguy-original/images/CoverGuyLogo-mobile.png" alt="The Cover Guy"/>
+	<div id="mobile-navigation">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<img src="<?php bloginfo('template_directory') ?>/../coverguy-original/images/CoverGuyLogo-mobile.png" alt="The Cover Guy"/>
+		</a>
 	</div>
 	
 	<header id="masthead" class="site-header" role="banner">

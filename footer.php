@@ -40,15 +40,22 @@
 
 		
 	<div id="store_links" style="text-align:center;padding-top:15px;">
+	<img class="mobile_store_links" src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-USD002.png" />
 	<?php if( stristr( $_SERVER['REQUEST_URI'], '/uk/') ){ ?>
-		<img src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-PND.jpg" />
+		<img class="main_store_links" src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-PND.jpg" />
+		<div class="mobile_number_phone">Tel: 02033184715</div>
 	<?php }elseif( stristr( $_SERVER['REQUEST_URI'], '/ca/fr/') ){ ?>
-		<img src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-CDF.jpg" />
+		<img class="main_store_links" src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-CDF.jpg" />
+		<div class="mobile_number_phone">888-715-4002</div>
 	<?php }elseif( stristr( $_SERVER['REQUEST_URI'], '/ca/') ){ ?>
-		<img src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-CAD.jpg" />
+		<img class="main_store_links" src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-CAD.jpg" />
+		<div class="mobile_number_phone">888-715-4002</div>
 	<?php }else{ ?>
-		<img src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-USD.jpg" />
+		<img class="main_store_links" src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-USD.jpg" />
+		<div class="mobile_number_phone">866-62 Cover (26837)</div>
 	<?php } ?>
+	<img class="mobile_store_links" src="<?php echo site_url(); ?>/wp-content/themes/coverguy-original/images/footer-USD003.png" />
+	
 	</div>
 	
 	

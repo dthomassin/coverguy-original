@@ -21,7 +21,7 @@
 }
 
 /* smaller than tablet */
-@media (max-width: 768px) {
+@media (max-width: 855px) {
 	#click-menu img, #click-menu .threeLines { height: 21px !important; }
 	#click-menu-label { padding:10px; }
 	#click-menu { border-radius: 7px; }

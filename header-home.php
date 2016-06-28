@@ -1,4 +1,4 @@
-<div style="margin:0px auto;max-width: 800px;">
+<div class="indexImage_container">
 
 	<?PHP 
 
@@ -47,10 +47,10 @@
 
 </div>
 
-<div class="floatcontainer" title="Testimonials">
-	<div style="float:left;width:312px;background:url(<?php echo $theme; ?>index_mid_b.jpg);">
-		<div style="width:312px;"><a href="<?php echo site_url(); ?>/customer-reviews/" title="Testimonals"><img src="<?php echo $theme; ?>index_mid_a_<?PHP echo CG_LANG; ?>.jpg" alt="Testimonials" width="312" height="29" border="0" /></a></div>
-		<div style="width:312px;height:191px;">
+<div id="testimonials_container" class="floatcontainer" title="Testimonials">
+	<div class="left_testimonials" style="background:url(<?php echo $theme; ?>index_mid_b.jpg);">
+		<div class="title_testimonials"><a href="<?php echo site_url(); ?>/customer-reviews/" title="Testimonals"><img src="<?php echo $theme; ?>index_mid_a_<?PHP echo CG_LANG; ?>.jpg" alt="Testimonials" width="312" height="29" border="0" /></a></div>
+		<div class="content_testimonials">
 			<div id="testimonialdiv" class="block" title="Testimonials">
 			
 			<?php 
@@ -69,10 +69,10 @@
 			
 			</div>
 		</div>
-		<div style="width:312px;height:9px;"><img src="<?php echo $theme; ?>index_mid_c.jpg" alt="Hot Tub Spa Cover" width="312" height="9"></div>
+		<div class="hot_tub_line"><img src="<?php echo $theme; ?>index_mid_c.jpg" alt="Hot Tub Spa Cover" width="312" height="9"></div>
 	</div>
 
-	<div style="float:left;">
+	<div class="hot_tub_container">
 		
 		<a href="<?php echo site_url(); if( CG_LOCAL == 'CA_FR' ){ ?>/fr/couvert-de-spa/<?php }else{ ?>/hot-tub-covers/<?php } ?>" title="Replacement Hot Tub & Spa Covers"><img src="<?php echo $theme; ?>index_right_<?PHP echo CG_LOCAL; ?>.jpg" alt="Replacement Hot Tub & Spa Covers" title="Replacement Hot Tub & Spa Covers" height="245" border="0"></a>
 	</div>
@@ -81,53 +81,3 @@
 
 
 <div style="clear:both;padding-bottom:15px;"></div>
-
-<style type="text/css" media="screen">
-.indexImage {
-    margin: 0;
-    padding: 0;
-    height: 255px;
-    width: 800px;
-}
-.indexBlock {
-    font-family: "Carme",sans-serif;
-    line-height: 36px;
-    margin: 0;
-    color: #ffffff;
-    font-weight: bold;
-}
-.floatcontainer::after {
-    clear: both;
-    content: ".";
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-}
-.floatcontainer {
-    display: block;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-#testimonialdiv {
-    color: #ffffff;
-    height: 182px;
-    left: 0;
-    margin-left: 20px;
-    margin-right: 0;
-    margin-top: 10px;
-    overflow: auto;
-    padding-right: 10px;
-    position: static;
-    top: 0;
-    visibility: visible;
-    width: 270px;
-    z-index: auto;
-	font-weight:normal;
-	font-size:13px !important;
-	line-height:16px;
-}
-#testimonialdiv h2 { font-weight:bold; font-size:14px;  }
-	#testimonialdiv h3 { font-weight:normal; }
-</style>

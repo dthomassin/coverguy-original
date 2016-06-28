@@ -89,7 +89,7 @@ function tcg_region_footer(){
 	ob_start();
 
 	?>
-	<div id="tcg_region_footer_wrapper" style="margin:0px auto; width:800px; height:50px;">
+	<div id="tcg_region_footer_wrapper" style="margin:0px auto; max-width:800px; min-height:50px;">
 	<div id="tcg_region_footer">
 		<div class="tcg_region_footer_left">
 		<a target="_blank" href="/?SetLocation=US_EN"><div class="region_link us_flag">United States</div></a>
