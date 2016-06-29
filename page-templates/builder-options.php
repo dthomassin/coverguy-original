@@ -401,6 +401,8 @@ get_header(); ?>
 						
 						
 							<div id="options_1">
+							
+							<?php /* ?>
 								<table border="0" cellspacing="0" cellpadding="0" style="wdith:100%;">
 									<tr>
 										<td valign="top">
@@ -480,6 +482,9 @@ get_header(); ?>
 											<?php the_field('shape_warning');  ?>
 										</td>
 									</tr>
+									
+									
+									
 									<tr>
 										<td id="measuring_warning" colspan="2"><?php the_field('measuring_warning'); ?></td><td style="text-align:center;">
 											
@@ -490,7 +495,121 @@ get_header(); ?>
 											<?php } ?>
 										</td>
 									</tr>
-								</table>
+								</table><?php */ ?>
+								
+								
+								
+								
+								
+								
+								<!-- ADDONS Trois-Soixante -->
+								<div class="container-fluid">
+								
+									<div class="row">
+										
+										<div class="col-sm-6">
+											<table id="option_1_fields" border="0" cellspacing="5" cellpadding="5" style="width:auto;">
+												<tr><th><?php if( CG_LOCAL == 'CA_FR' ){ ?>Forme<?php }else{ ?>Shape<?php } ?>:</th><td><?php echo $shape_name; ?><input type="hidden" id="form_shape" name="form_shape" value="<?php echo $shape_slug; ?>"></td></tr>
+												<tr><th><?php if( CG_LOCAL == 'CA_FR' ){ ?>Couleur<?php }else{ ?>Colour<?php } ?>:</th><td><?php echo $colour_name; ?><input type="hidden" id="form_colour" name="form_colour" value="<?php echo $colour_slug; ?>"></td></tr>
+												<tr>
+													<th><?php if( CG_LOCAL == 'CA_FR' ){ ?>Sélectionner votre pli<?php }else{ ?>Fold<?php } ?>:</th>
+													<td>
+														<select id="measurement_fold" name="measurement_fold" onchange="check_fold();return(false);">
+															<option value="fold_a" <?php if( isset( $builder_values['measurement_fold'] ) && $builder_values['measurement_fold'] == 'fold_a' ){ ?> selected="selected" <?php } ?>><?php if( CG_LOCAL == 'CA_FR' ){ ?>Coupe A moitié<?php }else{ ?>Cut A in half<?php } ?></option>
+															<option value="fold_b" <?php if( isset( $builder_values['measurement_fold'] ) && $builder_values['measurement_fold'] == 'fold_b' ){ ?> selected="selected" <?php } ?>><?php if( CG_LOCAL == 'CA_FR' ){ ?>Coupe B moitié<?php }else{ ?>Cut B in half<?php } ?></option>
+														</select>
+														<script type="text/javascript">
+														function check_fold(){
+															if( jQuery("#measurement_fold").val() == 'fold_a' ){
+																jQuery(".is_fold_a").show();
+																jQuery(".is_fold_b").hide();
+															}else{
+																jQuery(".is_fold_b").show();
+																jQuery(".is_fold_a").hide();
+															}
+														}
+														jQuery( document ).ready(function(){ check_fold(); });
+														</script>
+													</td>
+												</tr>
+												
+												
+												<?php if( CG_LOCAL == 'UK_EN' ){ $builder_unit = 'Millimeters'; ?>
+												<tr>
+													<th style="white-space: nowrap;">Meaurement Unit: </th><td>
+														<select name="measurement_unit" id="measurement_unit" onchange="change_unit();">
+															<option value="Millimeters" <?php if( isset( $builder_values['measurement_unit'] ) && $builder_values['measurement_unit'] == 'Millimeters' ){ $builder_unit = 'Millimeters'; ?>selected="selected"<?php } ?> >Millimeters</option>
+															<option value="Centimeters" <?php if( isset( $builder_values['measurement_unit'] ) && $builder_values['measurement_unit'] == 'Centimeters' ){ $builder_unit = 'Centimeters'; ?>selected="selected"<?php } ?> >Centimeters</option>
+															<option value="Inches" <?php if( isset( $builder_values['measurement_unit'] ) && $builder_values['measurement_unit'] == 'Inches' ){ $builder_unit = 'Inches'; ?>selected="selected"<?php } ?> >Inches</option>
+														</select>
+													</td>
+												</tr>
+												<script type="text/javascript">
+												function change_unit(){ 
+													jQuery(".measure_unit_string").html( jQuery("#measurement_unit").val() ); 
+													
+													if( jQuery("#measurement_unit").val() == 'Millimeters' ){
+														jQuery("#skirt_length,#skirt_length_mm,#skirt_length_cm").hide();
+														jQuery("#skirt_length_mm").show();
+													}
+													if( jQuery("#measurement_unit").val() == 'Centimeters' ){
+														jQuery("#skirt_length,#skirt_length_mm,#skirt_length_cm").hide();
+														jQuery("#skirt_length_cm").show();
+													}
+													if( jQuery("#measurement_unit").val() == 'Inches' ){
+														jQuery("#skirt_length,#skirt_length_mm,#skirt_length_cm").hide();
+														jQuery("#skirt_length").show();
+													}
+												}
+												</script>
+												<?php } ?>
+
+												<tr><th style="white-space: nowrap;"><?php echo $_measurement_title; ?> A:</th><td><input class="measurement_field" type="text" value="<?php if( isset( $builder_values['measurement_a'] ) ){ echo $builder_values['measurement_a']; } ?>" maxlength="4" size="4" id="measurement_a" name="measurement_a"> <span class="measure_unit_string"><?php echo $builder_unit; ?></span></td></tr>
+												<?php if( in_array( 'B', $_measurement ) ){ ?><tr><th><?php echo $_measurement_title; ?> B:</th><td><input class="measurement_field" type="text" value="<?php if( isset( $builder_values['measurement_b'] ) ){ echo $builder_values['measurement_b']; } ?>" maxlength="4" size="4" id="measurement_b" name="measurement_b"> <span class="measure_unit_string"><?php echo $builder_unit; ?></span></td></tr><?php } ?>
+												<?php if( in_array( 'C', $_measurement ) ){ ?><tr><th><?php echo $_measurement_title; ?> C:</th><td><input class="measurement_field" type="text" value="<?php if( isset( $builder_values['measurement_c'] ) ){ echo $builder_values['measurement_c']; } ?>" maxlength="4" size="4" id="measurement_c" name="measurement_c"> <span class="measure_unit_string"><?php echo $builder_unit; ?></span></td></tr><?php } ?>
+												<?php if( in_array( 'D', $_measurement ) ){ ?><tr><th><?php echo $_measurement_title; ?> D:</th><td><input class="measurement_field" type="text" value="<?php if( isset( $builder_values['measurement_d'] ) ){ echo $builder_values['measurement_d']; } ?>" maxlength="4" size="4" id="measurement_d" name="measurement_d"> <span class="measure_unit_string"><?php echo $builder_unit; ?></span></td></tr><?php } ?>
+												<?php if( in_array( 'E', $_measurement ) ){ ?><tr><th><?php echo $_measurement_title; ?> E:</th><td><input class="measurement_field" type="text" value="<?php if( isset( $builder_values['measurement_e'] ) ){ echo $builder_values['measurement_e']; } ?>" maxlength="4" size="4" id="measurement_e" name="measurement_e"> <span class="measure_unit_string"><?php echo $builder_unit; ?></span></td></tr><?php } ?>
+												<?php if( in_array( 'F', $_measurement ) ){ ?><tr><th><?php echo $_measurement_title; ?> F:</th><td><input class="measurement_field" type="text" value="<?php if( isset( $builder_values['measurement_f'] ) ){ echo $builder_values['measurement_f']; } ?>" maxlength="4" size="4" id="measurement_f" name="measurement_f"> <span class="measure_unit_string"><?php echo $builder_unit; ?></span></td></tr><?php } ?>
+											</table>
+										</div>
+										
+										<div class="col-sm-3">
+											<div style="width:190px;margin-right:10px;height:180px;background-image: url('<?php echo $colour_image; ?>');">
+												<div style="width: 190px; height: 180px; background-image: url('<?php echo $shape_a; ?>'); display: block;" class="fold is_fold_a"></div>
+												<div style="width: 190px; height: 180px; background-image: url('<?php echo $shape_b; ?>'); display: none;" class="fold is_fold_b"></div>
+											</div>
+										</div>
+										
+										<div id="shape_warning" class="col-sm-3">
+											<?php the_field('shape_warning');  ?>
+										</div>
+										
+									</div>
+									
+									<div class="row">
+										<div id="measuring_warning" class="col-sm-9">
+											<?php the_field('measuring_warning'); ?>
+										</div>
+										<div class="col-sm-3" style="text-align:center;">
+										
+											<?php if( CG_LOCAL == 'CA_FR' ){ ?>
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/builder-steps/scroll-down-fr.png" />
+											<?php }else{ ?>
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/builder-steps/scroll-down.png" />
+											<?php } ?>
+											
+										</div>
+									</div>
+								
+								</div>
+								<!-- END ADDONS Trois-Soixante -->
+								
+								
+								
+								
+								
+								
+								
 							</div>
 						
 							<div id="options_2">
@@ -1004,7 +1123,7 @@ get_header(); ?>
 		    padding: 20px !important;
 			font-size:12px;
 			color:#000;
-			width:155px;
+			/*width:155px;*/
 		}
 		#shape_warning a { color:#3256a2; }
 	

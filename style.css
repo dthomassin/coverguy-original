@@ -115,7 +115,7 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 
 #testimonialdiv {
     color: #ffffff;
-    height: 182px;
+    height: 192px;
     left: 0;
     margin-left: 20px;
     margin-right: 0;
@@ -171,16 +171,35 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 
 .content_testimonials{
 	width:312px;
-	height:191px;
+	height:203px;
+}
+
+.title_testimonials a{
+	color: #ffffff;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-left: 20px;
+	line-height: 29px;
 }
 
 .title_testimonials{
-	width:312px;
+	/*width:312px;*/
+	
+	width:100%;
+	background: #899472;
+	height: 28px;
+	overflow: hidden;
+	-webkit-border-radius: 10px 0 0 0;
+border-radius: 10px 0 0 0;
 }
 
 .left_testimonials{
 	float:left;
 	width:312px;
+	-webkit-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+	padding-bottom: 3px;
 }
 
 .hot_tub_container{
@@ -202,23 +221,63 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 }
 
 
+
+
+.indexImage{
+	height: auto !important;
+}
+
+.indexImage img{
+	max-width: 100%;
+	height: auto;
+}
+
+.indexImage .indexBlock{
+	position: absolute;
+	z-index: 10;
+	top: 0px;
+	left: 0px;
+	line-height: 35px;
+}
+
+.txt_indexBlock_mobile{
+	display: none;
+}
+
+
 /* Media queries */
 
 @media screen and (max-width: 959px) {
 	
+	.site-header{
+		overflow: hidden;
+	}
+	
 	.site {
 		margin: 0 auto;
-		max-width: 807px;
+		max-width: 850px;
 		overflow: hidden;
 		width: 100% !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+	}
+	
+	#colophon{
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	
 	#main{
-		padding: 0px 0px 0px 0px;
+		padding: 20px 20px 20px 20px;
+	}
+	
+	#click-menu{
+		top: 20px !important;
+		right: 20px !important;
 	}
 	
 	#mobile-navigation{
-		padding: 10px 0 10px 0;
+		padding: 20px 0 20px 0;
 	}
 	
 	#responsive-menu-title{
@@ -249,19 +308,25 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 	.left_testimonials{
 		float: none;
 		width: 100% !important;
+		
+		-webkit-border-radius: 10px 10px 10px 10px;
+		border-radius: 10px 10px 10px 10px;
+		padding-bottom: 5px;
+	}
+	
+	.title_testimonials{
+		-webkit-border-radius: 10px 10px 0 0;
+		border-radius: 10px 10px 0 0;
 	}
 	
 	.content_testimonials{
 		width:100%;
-		height:191px;
+		height:203px;
 	}
 
-	.title_testimonials{
-		width:100%;
-		background: #899472;
-		height: 28px;
-		overflow: hidden;
-	}
+
+	
+	
 	
 	#testimonialdiv{
 		width: 100%;
@@ -295,6 +360,13 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 		line-height: 32px !important;
 		margin-top: 12px !important;
 	}
+	
+	
+
+}
+
+@media screen and (max-width: 850px) {
+	
 	
 	.cats_cover{
 		/*float: none !important;*/
@@ -330,10 +402,7 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 		width: 100%;
 	}
 	
-	#sidebar{
-		float: none !important;
-		margin: 0 auto;
-	}
+	
 	
 	#hot_tub_cats{
 		width: 100% !important;
@@ -342,11 +411,75 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 	.sidebar_container_desktop{
 		display: none;
 	}
+	
+	#sidebar{
+		float: none !important;
+		margin: 0 auto;
+	}
+	
+	
+	
+	
+	.indexImage{
+		padding-top: 25px;
+		padding-bottom: 25px;
+		height: auto !important;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f1200+0,890e00+44,6f0a00+100 */
+		background: #9f1200; /* Old browsers */
+		background: -moz-linear-gradient(top,  #9f1200 0%, #890e00 44%, #6f0a00 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #9f1200 0%,#890e00 44%,#6f0a00 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #9f1200 0%,#890e00 44%,#6f0a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f1200', endColorstr='#6f0a00',GradientType=0 ); /* IE6-9 */
+		-webkit-border-radius: 10px 10px 10px 10px;
+		border-radius: 10px 10px 10px 10px;
+		margin-bottom: 20px;
+	}
 
-}
+	.indexImage img{
+		display: none;
+	}
 
-@media screen and (max-width: 800px) {
-
+	.indexImage .indexBlock{
+		position: relative;
+		z-index: 0;
+		top: auto;
+		left: auto;
+		font-size: 18px !important;
+		line-height: 22px;
+		padding-bottom: 0px;
+		padding-top: 0px !important;
+	}
+	
+	.left_testimonials{
+		margin-bottom: 20px;
+	}
+	
+	.txt_indexBlock_mobile{
+		display: block;
+	}
+	
+	.txt_indexBlock_mobile div{
+		font-size: 30px;
+		padding-top: 0px;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		color: #ffffff;
+		font-family: "Carme",sans-serif;
+		font-weight: 700;
+		text-shadow: 0 0 5px #000000;
+	}
+	
+	.txt_indexBlock_mobile p{
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 10px;
+		font-size: 15px;
+		line-height: 17px;
+		font-weight: 500;
+		font-family: "Carme",sans-serif !important;
+		color: #ffffff;
+	}
 	
 }
 
@@ -378,9 +511,11 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 		display: none;
 	}*/
 	
-	.indexImage{
+	/*.indexImage{
 		display: none;
-	}
+	}*/
+	
+	
 	
 	#tcg_region_footer_wrapper a{
 		display: block;
@@ -391,6 +526,16 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 		width: 100%;
 	}
 	
+	.entry-header .entry-title {
+	    color: #3256a2;
+	    font-size: 27px;
+	    font-weight: bold;
+	    line-height: 100%;
+	    margin-bottom: 12px;
+	    margin-top: 0;
+	    word-spacing: 0;
+		
+	}
 
 }
 
