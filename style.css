@@ -11,7 +11,7 @@ Text Domain: thecoverguy
 */
 
 #main { 
-padding: 10px 10px 10px 25px;
+	padding: 10px 20px 10px 20px;
 	background-color:#fff;
 	border-radius:10px;
 	
@@ -338,12 +338,38 @@ body .gform_wrapper .product_totals label.gfield_label + div.ginput_container {
 	#hot_tub_cats{
 		width: 100% !important;
 	}
+	
+	.sidebar_container_desktop{
+		display: none;
+	}
 
 }
 
 @media screen and (max-width: 800px) {
 
 	
+}
+
+
+@media screen and (max-width: 700px) {
+
+	#ltp-body .features-c{
+		background: none !important;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		padding-top: 0px;
+		padding-bottom: 20px;
+		height: auto !important;
+		border: 1px solid #bbd0d4;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+	}
+	
+	#ltp-body .features-c h3{
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
 }
 
 @media screen and (max-width: 668px) {

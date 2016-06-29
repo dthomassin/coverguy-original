@@ -32,22 +32,22 @@ get_header(); ?>
 					margin-bottom:20px;
 					line-height:30px;
 				}
-				#main {
+				/*#main {
 				    padding: 10px 25px 10px 25px;
-				}
+				}*/
 				#ltp-header h1 {
 					font-size:24px;
 				}
 				
 				#ltp-body .features-c {
-				    background-image: url("/wp-content/themes/coverguy-original/images/ltp-img-2c.jpg");
+				    background-image: url("<?php bloginfo('template_directory'); ?>/../coverguy-original/images/ltp-img-2c.jpg");
 				}
 				#ltp-body .features-a, #ltp-body .features-b, #ltp-body .features-c {
 				    background-repeat: no-repeat;
 				    height: 210px;
 				    padding-left: 340px;
 				    padding-right: 30px;
-				    width: 211px;
+				    /*width: 211px;*/
 				}
 				
 				.focus h2 {
@@ -56,7 +56,7 @@ get_header(); ?>
 					clear:none;
 				}
 				#ltp-body li {
-				    background-image: url("/wp-content/themes/coverguy-original/images/ltp-check.jpg");
+				    background-image: url("<?php bloginfo('template_directory'); ?>/../coverguy-original/images/ltp-check.jpg");
 				    background-position: 0 4px;
 				    background-repeat: no-repeat;
 				    color: #256775;
@@ -71,6 +71,12 @@ get_header(); ?>
 				p { line-height:20px; padding-bottom:15px; }
 				
 				#ltp-header p { padding:5px 0px 0px 0px;}
+				
+				.left img{
+					max-width: 100%;
+					height: auto;
+				}
+				
 				</style>
 				
 					<div id="ltp-header">
@@ -87,7 +93,7 @@ get_header(); ?>
 								<?php
 								$content = get_the_content();
 								$content = apply_filters('the_content', $content);
-								$content = '<a href="/hot-tub-covers/"><img style="float:right;margin: 0 0 20px 30px;" src="/wp-content/themes/coverguy-original/images/ltp-thumbs.png" /></a>' . $content;
+								$content = '<a href="/hot-tub-covers/"><img style="float:right;margin: 0 0 20px 30px;" src="' . get_template_directory_uri () . '/../coverguy-original/images/ltp-thumbs.png" /></a>' . $content;
 								echo $content;
 								?>
 								</div>
@@ -95,7 +101,7 @@ get_header(); ?>
 							<p><i>Now Choose one of The Cover Guy <?php echo str_replace(array('Hot Tub Covers','Hot Tub Cover'),"",get_the_title()); ?> Replacement Hot Tub Cover Designs below that best suites your climate and hot tub application.</i></p>
 					
 								<br/><br/>
-								<a href="/hot-tub-covers/"><img src="/wp-content/themes/coverguy-original/images/ltp-covers.jpg" /></a>
+								<a href="/hot-tub-covers/"><img src="<?php bloginfo('template_directory'); ?>/../coverguy-original/images/ltp-covers.jpg" /></a>
 								
 							</div>
 
