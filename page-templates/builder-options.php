@@ -393,7 +393,13 @@ get_header(); ?>
 						<form id="goto_next_page" action="<?php echo $next_url; ?>" method="post" accept-charset="utf-8">
 							<input type="hidden" name="builder_shape" value="" id="builder_shape">
 						</form>
-					
+						
+						<?php if( CG_LOCAL == 'CA_FR' ){ ?>
+						<h1 class="title_steps">Détails</h1>
+						<?php }else{ ?>
+						<h1 class="title_steps">Details</h1>
+						<?php } ?>
+						
 						<h2><?php the_field('upgrades_options_title_en'); ?></h2>
 						<p><?php the_field('upgrades_options_content_en'); ?></p>
 					
@@ -506,8 +512,13 @@ get_header(); ?>
 								<div class="container-fluid">
 								
 									<div class="row">
-										
-										<div class="col-sm-6">
+										<div class="col-sm-4 col-sm-push-8">
+											<div style="width:190px;margin-right:10px;height:180px;background-image: url('<?php echo $colour_image; ?>');">
+												<div style="width: 190px; height: 180px; background-image: url('<?php echo $shape_a; ?>'); display: block;" class="fold is_fold_a"></div>
+												<div style="width: 190px; height: 180px; background-image: url('<?php echo $shape_b; ?>'); display: none;" class="fold is_fold_b"></div>
+											</div>
+										</div>
+										<div class="col-sm-8 col-sm-pull-4">
 											<table id="option_1_fields" border="0" cellspacing="5" cellpadding="5" style="width:auto;">
 												<tr><th><?php if( CG_LOCAL == 'CA_FR' ){ ?>Forme<?php }else{ ?>Shape<?php } ?>:</th><td><?php echo $shape_name; ?><input type="hidden" id="form_shape" name="form_shape" value="<?php echo $shape_slug; ?>"></td></tr>
 												<tr><th><?php if( CG_LOCAL == 'CA_FR' ){ ?>Couleur<?php }else{ ?>Colour<?php } ?>:</th><td><?php echo $colour_name; ?><input type="hidden" id="form_colour" name="form_colour" value="<?php echo $colour_slug; ?>"></td></tr>
@@ -573,24 +584,19 @@ get_header(); ?>
 											</table>
 										</div>
 										
-										<div class="col-sm-3">
-											<div style="width:190px;margin-right:10px;height:180px;background-image: url('<?php echo $colour_image; ?>');">
-												<div style="width: 190px; height: 180px; background-image: url('<?php echo $shape_a; ?>'); display: block;" class="fold is_fold_a"></div>
-												<div style="width: 190px; height: 180px; background-image: url('<?php echo $shape_b; ?>'); display: none;" class="fold is_fold_b"></div>
-											</div>
-										</div>
 										
-										<div id="shape_warning" class="col-sm-3">
+										
+										<div id="shape_warning" class="col-sm-12">
 											<?php the_field('shape_warning');  ?>
 										</div>
 										
 									</div>
 									
 									<div class="row">
-										<div id="measuring_warning" class="col-sm-9">
+										<div id="measuring_warning" class="col-sm-12">
 											<?php the_field('measuring_warning'); ?>
 										</div>
-										<div class="col-sm-3" style="text-align:center;">
+										<?php /*<div class="col-sm-3 hide_scroll_mobile" style="text-align:center;">
 										
 											<?php if( CG_LOCAL == 'CA_FR' ){ ?>
 											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/builder-steps/scroll-down-fr.png" />
@@ -598,7 +604,7 @@ get_header(); ?>
 											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/builder-steps/scroll-down.png" />
 											<?php } ?>
 											
-										</div>
+										</div>*/ ?>
 									</div>
 								
 								</div>
@@ -612,7 +618,7 @@ get_header(); ?>
 								
 							</div>
 						
-							<div id="options_2">
+							<div id="options_2" style="padding-top: 20px;">
 
 								<table border="0" cellspacing="0" cellpadding="0">
 								
@@ -954,7 +960,7 @@ get_header(); ?>
 									<?php foreach( get_field('cover_specials') as $index => $specials ){ ?>
 									<tr>
 										<th><?php if( CG_LOCAL == 'CA_FR' ){ ?>Promotion<?php }else{ ?>Special<?php } ?> #<?php echo ($index+1) . ' - ' . $specials['title']; ?></th>
-										<td>[<a href="<?php echo get_permalink( $specials['details_page']->ID ); ?>" target="_blank"><?php if( CG_LOCAL == 'CA_FR' ){ ?>voir<?php }else{ ?>view<?php } ?></a>]</td>
+										<td class="view_product_options3">[<a href="<?php echo get_permalink( $specials['details_page']->ID ); ?>" target="_blank"><?php if( CG_LOCAL == 'CA_FR' ){ ?>voir<?php }else{ ?>view<?php } ?></a>]</td>
 										<?php if( CG_LOCAL == 'CA_FR' ){ ?>
 										<td class="regular_price">Rég <?php echo $specials['regular_price']; ?>$</td>
 										<td><?php echo $specials['special_price']; ?>$</td>

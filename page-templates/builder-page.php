@@ -46,6 +46,18 @@ if( $builder_include ){
 			<div class="menu_item"><img src="'.get_stylesheet_directory_uri().'/images/builder-steps/step-5-'.$step5.'-'.$step_lang.'.jpg" /></div>
 			<div style="clear:both;"></div>
 		</div>
+		
+		<div id="builder_steps_mobile">
+			<div class="menu_item ' . $step1 . '"><img src="'.get_stylesheet_directory_uri().'/images/builder-steps/step-1-'.$step1.'-mobile.png" style="width: 100%;height: auto;" /></div>
+			<div class="menu_item ' . $step2 . '"><img src="'.get_stylesheet_directory_uri().'/images/builder-steps/step-2-'.$step2.'-mobile.png" style="width: 100%;height: auto;" /></div>
+			<div class="menu_item ' . $step3 . '"><img src="'.get_stylesheet_directory_uri().'/images/builder-steps/step-3-'.$step3.'-mobile.png" style="width: 100%;height: auto;" /></div>
+			<div class="menu_item ' . $step4 . '"><img src="'.get_stylesheet_directory_uri().'/images/builder-steps/step-4-'.$step4.'-mobile.png" style="width: 100%;height: auto;" /></div>
+			<div class="menu_item ' . $step5 . '"><img src="'.get_stylesheet_directory_uri().'/images/builder-steps/step-5-'.$step5.'-mobile.png" style="width: 100%;height: auto;" /></div>
+			<div style="clear:both;"></div>
+		</div>';
+		
+		
+		$builder_navigation .= '
 		<style type="text/css" media="screen">
 			#builder_steps { width:100%; margin-bottom:20px; }
 			#builder_steps .menu_item { float:left; margin-right:20px;}

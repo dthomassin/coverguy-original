@@ -244,10 +244,44 @@ border-radius: 10px 0 0 0;
 	display: none;
 }
 
+.mobile_hot_tub{
+	display: none;
+}
+
+h1.title_steps{
+	display: none;
+	color: #429d00;
+	font-weight: 700;
+	font-size: 28px;
+	margin-top: 0;
+}
+
+#builder_steps_mobile{
+	display: none;
+	width: 100%;
+    margin-bottom: 4px;
+}
+#builder_steps_mobile .menu_item{
+	float: left;
+	padding-right: 10px;
+}
+
 
 /* Media queries */
 
 @media screen and (max-width: 959px) {
+	
+	form select{
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+	
+	.tcg_region_footer_left a{
+		display: inline-block;
+		font-size: 15px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
 	
 	.site-header{
 		overflow: hidden;
@@ -265,6 +299,11 @@ border-radius: 10px 0 0 0;
 	#colophon{
 		padding-left: 20px;
 		padding-right: 20px;
+		margin-top: 20px;
+	}
+	
+	#testimonials_container{
+		margin-bottom: 5px;
 	}
 	
 	#main{
@@ -367,6 +406,25 @@ border-radius: 10px 0 0 0;
 
 @media screen and (max-width: 850px) {
 	
+	#builder_steps{
+		display: none;
+	}
+	
+	#builder_steps_mobile{
+		display: block;
+	}
+	
+	h1.title_steps{
+		display: block;
+	}
+	
+	.hot_tub_container{
+		display: none;
+	}
+	
+	.mobile_hot_tub{
+		display: block;
+	}
 	
 	.cats_cover{
 		/*float: none !important;*/
@@ -424,12 +482,12 @@ border-radius: 10px 0 0 0;
 		padding-top: 25px;
 		padding-bottom: 25px;
 		height: auto !important;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f1200+0,890e00+44,6f0a00+100 */
-		background: #9f1200; /* Old browsers */
-		background: -moz-linear-gradient(top,  #9f1200 0%, #890e00 44%, #6f0a00 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(top,  #9f1200 0%,#890e00 44%,#6f0a00 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(to bottom,  #9f1200 0%,#890e00 44%,#6f0a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f1200', endColorstr='#6f0a00',GradientType=0 ); /* IE6-9 */
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bc363d+0,931e26+100 */
+		background: #bc363d; /* Old browsers */
+		background: -moz-linear-gradient(top,  #bc363d 0%, #931e26 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #bc363d 0%,#931e26 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #bc363d 0%,#931e26 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc363d', endColorstr='#931e26',GradientType=0 ); /* IE6-9 */
 		-webkit-border-radius: 10px 10px 10px 10px;
 		border-radius: 10px 10px 10px 10px;
 		margin-bottom: 20px;
@@ -450,9 +508,9 @@ border-radius: 10px 0 0 0;
 		padding-top: 0px !important;
 	}
 	
-	.left_testimonials{
+	/*.left_testimonials{
 		margin-bottom: 20px;
-	}
+	}*/
 	
 	.txt_indexBlock_mobile{
 		display: block;
@@ -479,6 +537,50 @@ border-radius: 10px 0 0 0;
 		font-weight: 500;
 		font-family: "Carme",sans-serif !important;
 		color: #ffffff;
+	}
+	
+	#store_links{
+		padding-top: 20px !important;
+	}
+	
+	#tcg_region_footer_wrapper{
+		padding-bottom: 40px;
+	}
+	
+	.site-info li{
+		display: block !important;
+	}
+	
+	.site-info li span{
+		display: none !important;
+	}
+	
+	.site-info li a{
+		display: block !important;
+		background: #0188bd;
+		color: #ffffff;
+		border-bottom: 1px solid #ffffff;
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+	
+	.site-info li a:hover{
+		background: #0e94c9;
+		color: #ffffff;
+		text-decoration: none;
+	}
+	
+	.cover-details a, .cover-details-b a{
+		display: block;
+	}
+	
+}
+
+
+@media screen and (max-width: 767px) {
+
+	.hide_scroll_mobile{
+		display: none;
 	}
 	
 }
@@ -516,6 +618,16 @@ border-radius: 10px 0 0 0;
 	}*/
 	
 	
+	#options_3 .regular_price{
+		display: none;
+	}
+	.entry-content #options_3 th{
+		font-size: 13px !important;
+	}
+	
+	.view_product_options3{
+		display: none;
+	}
 	
 	#tcg_region_footer_wrapper a{
 		display: block;

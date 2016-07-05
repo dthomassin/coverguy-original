@@ -13,8 +13,18 @@
 	'California', 'Washington', 'Oregon', 'Idaho', 'Nevada', 'Utah', 'New Mexico', 
 	'Arizona', 'Colorado', 'Texas', 'Oklahoma', 'Kansas', 'Montana', 'Wyoming', 'South Dekota', 'Nebraska', 'Florida', 'Georgia', 'Alabama', 'Louisiana', 'Mississippi', 
 	'Arkansas', 'Hawaii', 'South Carolina', 'Tennessee', 'Kentucky', 'Missouri');
+	?>
 
-	if( in_array( $geo_state, $reg_state ) ){ ?>
+	
+	
+	<div class="hot_tub_container mobile_hot_tub" style="margin-bottom: 20px;">
+		
+		<a href="<?php echo site_url(); if( CG_LOCAL == 'CA_FR' ){ ?>/fr/couvert-de-spa/<?php }else{ ?>/hot-tub-covers/<?php } ?>" title="Replacement Hot Tub & Spa Covers"><img src="<?php echo $theme; ?>index_right_<?PHP echo CG_LOCAL; ?>.jpg" alt="Replacement Hot Tub & Spa Covers" title="Replacement Hot Tub & Spa Covers" height="245" border="0"></a>
+	</div>
+	
+	
+	
+	<?php if( in_array( $geo_state, $reg_state ) ){ ?>
 
 	<div class="indexImage" style="position:relative;">
 

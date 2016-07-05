@@ -31,6 +31,12 @@ get_header(); ?>
 			
 			<article>
 				<div class="entry-content">
+				
+					<?php if( CG_LOCAL == 'CA_FR' ){ ?>
+					<h1 class="title_steps">Couleur</h1>
+					<?php }else{ ?>
+					<h1 class="title_steps">Color</h1>
+					<?php } ?>
 					
 					<h2><?php the_field('color_title_en'); ?></h2>
 					<p><?php the_field('color_content_en'); ?></p>
@@ -38,16 +44,22 @@ get_header(); ?>
 					<form id="goto_next_page" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post" accept-charset="utf-8">
 						<input type="hidden" name="builder_colour" value="" id="builder_colour">
 					</form>
+					<div class="row">
 					<?php foreach( get_field('cover_colours') as $index => $data ){ ?>
+						
 						<?php if( $data['colour_active'] == 'yes' ){ ?>
+						<div class="col-xs-6 col-sm-3" style="text-align: center;">
 							<span class="colour_container">
 							<?php if( isset( $_COOKIE['builder_colour'] ) && $_COOKIE['builder_colour'] == $data['colour_slug'] ){ ?>
 								<div class="colour_active"><i class="fa fa-check-circle" aria-hidden="true"></i></div>
 							<?php } ?>
 							<a href="#" onclick="builder_colour('<?php echo $data['colour_slug']; ?>');return(false);"><img src="<?php echo $data['colour_image']; ?>" title="<?php echo $data['colour_name']; ?>" alt="<?php echo $data['colour_name']; ?>"></a>
 							</span>
+						</div>
 						<?php } ?>
+						
 					<?php } ?>
+					</div><!-- END .row -->
 	
 				</div><!-- #content -->
 			</article>
