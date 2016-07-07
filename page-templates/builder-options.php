@@ -586,26 +586,10 @@ get_header(); ?>
 										
 										
 										
-										<div id="shape_warning" class="col-sm-12">
-											<?php the_field('shape_warning');  ?>
-										</div>
+										
 										
 									</div>
 									
-									<div class="row">
-										<div id="measuring_warning" class="col-sm-12">
-											<?php the_field('measuring_warning'); ?>
-										</div>
-										<?php /*<div class="col-sm-3 hide_scroll_mobile" style="text-align:center;">
-										
-											<?php if( CG_LOCAL == 'CA_FR' ){ ?>
-											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/builder-steps/scroll-down-fr.png" />
-											<?php }else{ ?>
-											<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/builder-steps/scroll-down.png" />
-											<?php } ?>
-											
-										</div>*/ ?>
-									</div>
 								
 								</div>
 								<!-- END ADDONS Trois-Soixante -->
@@ -987,8 +971,15 @@ get_header(); ?>
 										<a href="#" onclick="update_fields();return(false);"><input type="image" src="/wp-content/uploads/2014/03/proceed-en.gif" /></a>
 									<?php } ?>
 								</div>
-
 								
+								<div class="row" style="margin-top: 30px;">
+									<div id="shape_warning" class="col-sm-12">
+										<?php the_field('shape_warning');  ?>
+									</div>
+									<div id="measuring_warning" class="col-sm-12">
+										<?php the_field('measuring_warning'); ?>
+									</div>
+								</div>
 							</div>
 
 							
